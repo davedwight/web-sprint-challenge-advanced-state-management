@@ -4,6 +4,9 @@ export const FETCH_START = "FETCH_START";
 export const FETCH_SUCCESS = "FETCH_SUCCESS";
 export const FETCH_FAIL = "FETCH_FAIL";
 export const ADD_SMURF = "ADD_SMURF";
+export const SET_ERROR = "SET_ERROR";
+
+const uniqueID = Date.now();
 
 export const fetchStart = () => {
     return({type: FETCH_START});
@@ -19,11 +22,16 @@ export const fetchFail = (error) => {
 
 export const addSmurf = (smurf) => {
     return({type: ADD_SMURF, payload: {
+        id: uniqueID,
         name: smurf.name,
         position: smurf.position,
         nickname: smurf.nickname,
         description: smurf.description
     }})
+}
+
+export const setError = (value) => {
+    return({type: SET_ERROR, payload: value})
 }
 
 export const fetchSmurfs = () => {
