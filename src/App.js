@@ -13,6 +13,7 @@ import { fetchSmurfs } from './actions';
 class App extends Component {
 
   componentDidMount = () => {
+    console.log("component has mounted");
     this.props.dispatch(fetchSmurfs());
   }
 

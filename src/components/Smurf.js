@@ -2,7 +2,7 @@ import React from 'react';
 
 const Smurf = (props)=> {
     const { smurf } = props;
-    console.log("smurf name inside Smurf: ", smurf.name)
+    console.log("props inside Smurf: ", props)
     
     return(<div data-testid="smurf" className="card">
         <div className="card-body">

@@ -15,11 +15,11 @@ const reducer = (state = initialState, action) => {
                 isLoading: true
             })
         case(FETCH_SUCCESS):
-        console.log("fetch success in reducer")
+        console.log("fetch success action.payload in reducer", action.payload)
             return({
                 ...state,
                 isLoading: false,
-                smurfs: [...state.smurfs, action.payload]
+                smurfs: action.payload
             })
         case(FETCH_FAIL):
             return({
