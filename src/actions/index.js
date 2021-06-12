@@ -21,6 +21,7 @@ export const fetchFail = (error) => {
 }
 
 export const addSmurf = (smurf) => {
+    console.log("add smurf action fired")
     return({type: ADD_SMURF, payload: {
         id: uniqueID,
         name: smurf.name,

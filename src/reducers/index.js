@@ -9,11 +9,13 @@ export const initialState = {
 const reducer = (state = initialState, action) => {
     switch(action.type) {
         case(FETCH_START):
+            console.log("fetch start in reducer")
             return({
                 ...state,
                 isLoading: true
             })
         case(FETCH_SUCCESS):
+        console.log("fetch success in reducer")
             return({
                 ...state,
                 isLoading: false,
@@ -26,6 +28,7 @@ const reducer = (state = initialState, action) => {
                 error: action.payload
             })
         case(ADD_SMURF):
+            console.log("add smurf in reducer")
             return({
                 ...state,
                 smurfs: [...state.smurfs, action.payload]
